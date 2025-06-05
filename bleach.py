@@ -1,9 +1,9 @@
 # https://infoarena.ro/problema/bleach
 # O(n log n)
 
-with open("data/bleach.in", "r") as f:
-    n, k = map(int, f.readline().split())
-    power = list(map(int, f.readline().split()))
+with open("data/bleach.in", "r") as fin:
+    n, k = map(int, fin.readline().split())
+    power = list(map(int, fin.readline().split()))
 power.sort()
 current_power = 0
 init_power = 0
@@ -15,5 +15,5 @@ for p in power:
     current_power += p
 # init_power is now the result
 
-with open("data/bleach.out", "w") as f:
-    f.write(f"{init_power}\n")
+with open("data/bleach.out", "w") as fout:
+    fout.write(f"{init_power}\n")
